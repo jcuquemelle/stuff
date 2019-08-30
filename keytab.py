@@ -3,7 +3,7 @@
 from getpass import getuser, getpass
 
 default_keytab = '/home/%s/.kt' % getuser()
-default_domain = 'CORP.EPSILON.COM'
+default_domain = 'CRITEOIS.LAN'
 ktutil = '/usr/bin/ktutil'
 
 __doc__ = """Keytab file maintenance utility.
