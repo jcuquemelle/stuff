@@ -87,7 +87,7 @@ if args['test']:
 
 
 # 0. Start ktutil command as a child process
-child = pexpect.spawn(ktutil)
+child = pexpect.spawnu(ktutil)
 default_prompt = 'ktutil:  '
 
 def wait (prompt=default_prompt):
