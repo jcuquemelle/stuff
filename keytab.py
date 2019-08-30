@@ -1,6 +1,8 @@
 #!python
 
 from getpass import getuser, getpass
+import os
+import stat
 
 default_keytab = '/home/%s/.kt' % getuser()
 default_domain = 'CRITEOIS.LAN'
@@ -156,6 +158,7 @@ print("Keytab file %s %sd." % (keytab, wkt_action))
 child.sendline('quit')
 child.close()           # termintate ktutil (if it's not closed already)
 
+os.chmod(keytab, stat.S_IRUSR)
 # 6. Optionally test newly created/update keytab
 if args['--and-test']:
     kinit_test()
